@@ -1,3 +1,4 @@
+//import javax.xml.stream.Location;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -10,7 +11,7 @@ public class TechJobs {
 
     static Scanner in = new Scanner(System.in);
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
 
         // Initialize our field map with key/name pairs
         HashMap<String, String> columnChoices = new HashMap<>();
@@ -87,7 +88,7 @@ public class TechJobs {
 
         do {
 
-            System.out.println("\n" + menuHeader);
+            System.out.println("\n"+ menuHeader);
 
             // Print available choices
             for (int j = 0; j < choiceKeys.length; j++) {
@@ -112,7 +113,7 @@ public class TechJobs {
                 validChoice = true;
             }
 
-        } while(!validChoice);
+        } while (!validChoice);
 
         return choiceKeys[choiceIdx];
     }
@@ -120,7 +121,7 @@ public class TechJobs {
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
         if (someJobs.isEmpty()) {
-            System.out.println("No Results");
+            System.out.print("No Results");
         } else {
             for (HashMap<String, String> job : someJobs) {
                 System.out.println("\n*****");
@@ -131,7 +132,5 @@ public class TechJobs {
                 System.out.println("*****");
             }
         }
-
-        //System.out.println("printJobs is not implemented yet");
     }
-};
+}

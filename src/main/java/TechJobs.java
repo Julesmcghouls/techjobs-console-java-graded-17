@@ -1,4 +1,4 @@
-//import javax.xml.stream.Location;
+import javax.xml.stream.Location;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -121,18 +121,21 @@ public class TechJobs {
     }
 
     // Print a list of jobs
+    // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
-        if (someJobs.isEmpty()) {
-            System.out.print("No Results");
-        } else {
-            for (HashMap<String, String> job : someJobs) {
-                System.out.println("\n*****");
-                for (Map.Entry<String, String> entry : job.entrySet()) {
 
-                    System.out.println(entry.getKey() + ": " + entry.getValue());
-                }
-                System.out.println("*****");
-            }
+        if (someJobs.isEmpty()){
+            System.out.print("No Results");
+            return;
         }
+        // Iterating over the Arraylist
+        for (HashMap<String, String> job : someJobs) {
+            System.out.println("\n*****");
+            // Nested loop over HashMap
+            for (String key : job.keySet()) {
+                // Print out
+                System.out.println(key + ": " + job.get(key));
+            }
+        } System.out.println("*****");
     }
 }

@@ -86,6 +86,7 @@ public class JobData {
      * @param value The search term to look for
      * @return      List of all jobs with at least one field containing the value
      */
+    //2nd Create find by value method
     public static ArrayList<HashMap<String, String>> findByValue(String value) {
 
         // load data, if not already loaded
@@ -94,7 +95,7 @@ public class JobData {
 
         for (HashMap<String, String> row : allJobs) {
             for (Map.Entry<String, String> entry : row.entrySet()) {
-                if (entry.getValue().toLowerCase().contains(value.toLowerCase())) {
+                if (entry.getValue().toLowerCase().contains(value.toLowerCase())) { //3rd case-insensitive
                     if (!valueJob.contains(row)) {
                         valueJob.add(row);
 

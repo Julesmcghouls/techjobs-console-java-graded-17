@@ -121,7 +121,8 @@ public class TechJobs {
     }
 
     // Print a list of jobs
-    // Print a list of jobs
+
+    //1st implement printJobs method
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
         if (someJobs.isEmpty()){
@@ -133,7 +134,6 @@ public class TechJobs {
             System.out.println("\n*****");
             // Nested loop over HashMap
             for (String key : job.keySet()) {
-                // Print out
                 System.out.println(key + ": " + job.get(key));
             }
         } System.out.println("*****");

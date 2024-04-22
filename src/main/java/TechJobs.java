@@ -135,7 +135,7 @@ public class TechJobs {
             // Nested loop over HashMap
             for (String key : job.keySet()) {
                 System.out.println(key + ": " + job.get(key));
-            }
-        } System.out.println("*****");
+            } System.out.println("*****");
+        }
     }
 }
